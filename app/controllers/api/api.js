@@ -30,7 +30,7 @@ router.get('/api/knits', function (req, res){
     if (err) {
       res.send("There was an error with your GET request " + err)
     } else {
-      res.send(knits);
+      res.json(knits);
     }
   });
 })
@@ -42,7 +42,7 @@ router.post('/api/knits', authenticatedUser, function (req, res){
     if (err) {
       res.send("There was an error with your POST request " + err)
     } else {
-      res.redirect('/api/knits');
+      res.json(knit);
     }
   });
 })
@@ -53,7 +53,7 @@ router.get('/api/knits/:id', function (req, res){
     if (err) {
       res.send("There was an error with your GET request " + err);
     } else {
-      res.send(knit);
+      res.json(knit);
     }
   });
 })
