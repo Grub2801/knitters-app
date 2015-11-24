@@ -27,7 +27,7 @@ var config = {
       name: 'knitter-app'
     },
     port: (process.env.PORT || 3000),
-    db: 'mongodb://heroku_s2qplj7k:brcijesscnl4ub56pas21372n8@ds057204.mongolab.com:57204/heroku_s2qplj7k'
+    db: process.env.MONGOLAB_URI
   }
 };
 
