@@ -6,28 +6,28 @@ var config = {
   development: {
     root: rootPath,
     app: {
-      name: 'wdi-express'
+      name: 'knitter-app'
     },
     port: 3000,
-    db: 'mongodb://localhost/wdi-express-development'
+    db: 'mongodb://localhost/knitter-app-development'
   },
 
   test: {
     root: rootPath,
     app: {
-      name: 'wdi-express'
+      name: 'knitter-app'
     },
     port: 3000,
-    db: 'mongodb://localhost/wdi-express-test'
+    db: 'mongodb://localhost/knitter-app-test'
   },
 
   production: {
     root: rootPath,
     app: {
-      name: 'wdi-express'
+      name: 'knitter-app'
     },
-    port: process.env.PORT || 3000 ,
-    db: 'mongodb://localhost/wdi-express-production'
+    port: 3000 ,
+    db: 'mongodb://localhost/knitter-app-production'
   }
 };
 
