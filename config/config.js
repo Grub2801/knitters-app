@@ -27,7 +27,7 @@ var config = {
       name: 'knitter-app'
     },
     port: 3000 ,
-    db: 'mongodb://localhost/knitter-app-production'
+    db: process.env.MONGOLAB_URI || 'mongodb://localhost/knitter-app-production'
   }
 };
 
