@@ -30,7 +30,7 @@ router.get('/api/knits', function (req, res){
     if (err) {
       res.status(400).json({success: false, message: err})
     } else {
-      res.send(knits);
+      res.json(knits);
     }
   });
 })
@@ -52,7 +52,7 @@ router.get('/api/knits/:id', function (req, res){
     if (err) {
       res.status(400).json({success: false, message: err})
     } else {
-      res.send(knit);
+      res.json(knit);
     }
   });
 })
