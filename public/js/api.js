@@ -14,6 +14,22 @@ var API_WRAPPER = function () {
       method: "GET"
     })
   };
+
+  this.createKnitShop = function (params) {
+    return $.ajax({
+      url: this.URL_BASE + "/api/knits/",
+      method: "POST",
+      data: params
+    });
+  };
+
+  this.editKnitShop = function (id) {
+    return $.ajax({
+      url: this.URL_BASE + "/api/knits/" + id,
+      method: "PUT"
+    })
+  }
+
 };
 
 var API = new API_WRAPPER();

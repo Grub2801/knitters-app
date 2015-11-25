@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 
 var KnitSchema = new mongoose.Schema({
-  name: {type: String, require: true},
-  address: String,
+  name: {type: String, required: true},
+  address: {type: String, required: true},
   lon: Number,
   lat: Number,
   image: String,

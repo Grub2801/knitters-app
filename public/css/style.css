@@ -56,3 +56,10 @@ div#knit-show {
 a#edit-button {
   margin-right: 10px;
 }
+
+.panel-body {
+  background: rgba(255,255,255,0.8);
+}
+.panel {
+  background: none;
+}

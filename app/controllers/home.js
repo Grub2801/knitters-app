@@ -8,18 +8,28 @@ module.exports = function (app) {
 
 router.get('/', function (req, res, next) {
   res.render('static/home', {
-    // title: 'Generator-Express MVC'
   });
 });
 
 router.get('/knits', function (req, res, next) {
   res.render('knit/index', {
-    // title: 'Generator-Express MVC'
   });
 });
 
-router.get('/knits/:id', function (req, res, next) {
-  res.render('knit/show', {
-    // title: 'Generator-Express MVC'
+router.get('/knits/new', function (req, res, next) {
+  res.render('knit/new', {
+
   });
 });
+
+router.get('/knits/edit', function (req, res, next) {
+  res.render('knit/edit', {
+  });
+})
+
+router.get('/knits/:id', function (req, res, next) {
+  res.render('knit/show', {
+  });
+});
+
+

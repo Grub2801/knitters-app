@@ -41,7 +41,7 @@ router.post('/api/knits', authenticatedUser, function (req, res){
     if (err) {
       res.status(400).json({success: false, message: err})
     } else {
-      res.json({success: true})
+      res.json({success: true, knit: knit})
     }
   });
 })
