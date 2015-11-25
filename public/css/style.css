@@ -10,6 +10,7 @@ body {
   background: url('../img/KnittingBasket.png') no-repeat center;
   background-size: cover;
   min-height: 600px;
+  padding-top: 60px;
 }
 
 div.container-fluid {
@@ -25,15 +26,6 @@ div.container-fluid {
     padding: 0 15px;
 }
 
-@media(min-width:768px) {
-    body {
-        padding-top: 60px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-    }
-
-    .navbar-fixed-top .navbar-brand {
-        padding: 15px 0;
-    }
-}
 
 img#logo {
   height: 54px;
@@ -50,3 +42,22 @@ div#homepage-title {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+img#shop-photo {
+  margin-top: 20px;
+}
+
+div#knit-show {
+  margin-top: 70px;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 60px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
+

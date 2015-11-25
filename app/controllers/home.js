@@ -11,3 +11,15 @@ router.get('/', function (req, res, next) {
     // title: 'Generator-Express MVC'
   });
 });
+
+router.get('/knits', function (req, res, next) {
+  res.render('knit/index', {
+    // title: 'Generator-Express MVC'
+  });
+});
+
+router.get('/knits/:id', function (req, res, next) {
+  res.render('knit/show', {
+    // title: 'Generator-Express MVC'
+  });
+});
