@@ -28,7 +28,7 @@ router.get('/secret', authenticatedUser, function (req, res, next) {
 router.get('/api/knits', function (req, res){
   Knit.find({}, function (err, knits){
     if (err) {
-      res.send("There was an error with your GET request " + err)
+      res.status(400).json({success: false, message: err})
     } else {
       res.send(knits);
     }
@@ -38,11 +38,10 @@ router.get('/api/knits', function (req, res){
 //CREATE
 router.post('/api/knits', authenticatedUser, function (req, res){
   Knit.create(req.body.knit, function (err, knit){
-    console.log(req.body.knit);
     if (err) {
-      res.send("There was an error with your POST request " + err)
+      res.status(400).json({success: false, message: err})
     } else {
-      res.redirect('/api/knits');
+      res.json({success: true})
     }
   });
 })
@@ -51,7 +50,7 @@ router.post('/api/knits', authenticatedUser, function (req, res){
 router.get('/api/knits/:id', function (req, res){
   Knit.findById(req.params.id, function (err, knit){
     if (err) {
-      res.send("There was an error with your GET request " + err);
+      res.status(400).json({success: false, message: err})
     } else {
       res.send(knit);
     }
@@ -62,7 +61,7 @@ router.get('/api/knits/:id', function (req, res){
 router.put('/api/knits/:id', authenticatedUser, function (req, res){
   Knit.findByIdAndUpdate(req.params.id, req.body.knit, function (err, knit){
     if (err) {
-      res.send("There was an error with your PUT request " + err);
+      res.status(400).json({success: false, message: err})
     } else {
       res.json({message: "This knit shop has been updated, thankyou!"});
     }
@@ -73,7 +72,7 @@ router.put('/api/knits/:id', authenticatedUser, function (req, res){
 router.delete('/api/knits/:id', function (req, res){
   Knit.findByIdAndRemove(req.params.id, function (err, knit){
     if (err) {
-      res.send("There was an error with your DELETE request " + err);
+      res.status(400).json({success: false, message: err})
     } else {
       res.json({message: "This knit shop has been deleted, thankyou!"});
     }
