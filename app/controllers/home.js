@@ -22,10 +22,10 @@ router.get('/knits/new', function (req, res, next) {
   });
 });
 
-router.get('/knits/edit', function (req, res, next) {
+router.get('/knits/:id/edit', function (req, res,next){
   res.render('knit/edit', {
   });
-})
+});
 
 router.get('/knits/:id', function (req, res, next) {
   res.render('knit/show', {

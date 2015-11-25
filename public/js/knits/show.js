@@ -9,7 +9,7 @@ $(function(){
                       '<h2>' +
                         knit.name +
                         '<a class="btn btn-primary pull-right" href="/knits">Back</a>' +
-                        '<a id="edit-button" class="btn btn-success pull-right" href="#">Edit</a>' +
+                        '<a id="edit-button" class="btn btn-success pull-right" href="/knits/' + knit._id + '/edit">Edit</a>' +
                       '</h2>' +
                       '<p><strong>Address: </strong>' + knit.address + '</p>' +
                       '<p><strong>Phone: </strong>' + knit.phone + '</p>' +

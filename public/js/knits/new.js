@@ -1,6 +1,6 @@
 $(function(){
 
-  $('#new-shop-btn').on('click', function (e){
+  $('#new-shop-form').on('submit', function (e){
     e.preventDefault();
 
     var params = {

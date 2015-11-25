@@ -23,12 +23,13 @@ var API_WRAPPER = function () {
     });
   };
 
-  this.editKnitShop = function (id) {
+  this.editKnitShop = function (id, params) {
     return $.ajax({
       url: this.URL_BASE + "/api/knits/" + id,
-      method: "PUT"
-    })
-  }
+      method: "PUT",
+      data: params
+    });
+  };
 
 };
 
