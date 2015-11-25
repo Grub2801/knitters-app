@@ -1,7 +1,52 @@
-body {
+/*body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 a {
   color: #00B7FF;
+}*/
+
+body {
+}
+
+div.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 60px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
+
+img#logo {
+  height: 54px;
+  width: auto;
+}
+
+div#home-page {
+  background: url('../img/KnittingBasket.png') no-repeat center;
+  background-size: cover;
+  min-height: 520px;
+  padding-top: 160px;
+  color: white;
+}
+
+div#homepage-title {
+  background: rgba(0,0,0,0.5);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
