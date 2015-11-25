@@ -15,9 +15,9 @@ var API_WRAPPER = function () {
     })
   };
 
-  this.getOneShop = function () {
+  this.getOneShop = function (id) {
     return $.ajax({
-      url: this.URL_BASE + "/api/knits/:id",
+      url: this.URL_BASE + "/api/knits/" + id,
       method: "GET"
     })
   };

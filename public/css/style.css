@@ -61,3 +61,6 @@ div#knit-show {
     }
 }
 
+a#edit-button {
+  margin-right: 10px;
+}
