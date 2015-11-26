@@ -1,4 +1,4 @@
-var express         = require('express');
+ var express         = require('express');
 var router          = express.Router();
 var mongoose        = require('mongoose');
 var methodOverride  = require('method-override');
@@ -45,8 +45,7 @@ router.get('/api/knits', function (req, res){
 })
 
 //CREATE
-router.post('/api/knits', multipartMiddleware, function (req, res){
-  console.log('hello');
+router.post('/api/knits', authenticatedUser, multipartMiddleware, function (req, res){
   var file = req.files.file;
   var stream = fs.createReadStream(file.path);
 
@@ -69,11 +68,8 @@ router.post('/api/knits', multipartMiddleware, function (req, res){
           res.redirect('../knits/' + knit._id);
         }
       });
-
     });
   })
-
-
 })
 
 //SHOW

@@ -13,6 +13,6 @@ $(function(){
                     '</div>';
 
       $("#shop-index").append(newHTML);
-    })
+    }, errorHandling );
   })
 })

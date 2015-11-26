@@ -23,5 +23,5 @@ $(function(){
                   '<hr>';
 
     $("#shop-show").append(newHTML);
-  })
+  }, errorHandling);
 })
