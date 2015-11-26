@@ -18,7 +18,6 @@ div.container-fluid {
     padding: 0 15px;
 }
 
-
 img#logo {
   height: 54px;
   width: auto;
@@ -158,4 +157,13 @@ a#edit-button {
 .auth form .btn-primary {
     border-color: black;
     color: black;
+}
+
+#add-shop-btn {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+#show-shop-btn{
+  margin-top: 20px;
 }

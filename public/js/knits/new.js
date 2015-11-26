@@ -18,6 +18,7 @@ $(function(){
 
     API.createKnitShop(params).then(function(data){
       window.location.href = "/knits/" + data.knit._id;
+
     });
 
   })
