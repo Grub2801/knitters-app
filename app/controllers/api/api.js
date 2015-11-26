@@ -1,12 +1,21 @@
-var express  = require('express');
-var router   = express.Router();
-var mongoose = require('mongoose');
-var methodOverride = require('method-override');
-var bodyParser = require('body-parser')
+var express         = require('express');
+var router          = express.Router();
+var mongoose        = require('mongoose');
+var methodOverride  = require('method-override');
+var bodyParser      = require('body-parser')
+var Knit            = require('../../models/knit');
+var multipart       = require('connect-multiparty');
+var S3FSclass       = require('s3fs');
+var fs              = require('fs');
+var randomstring    = require("randomstring");
 
-var Knit = require('../../models/knit');
+var multipartMiddleware = multipart();
+var S3FS = new S3FSclass('knitter-app', {
+  accesKeyId:      process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+});
 
-module.exports = function (app) {
+module.exports      = function (app) {
   app.use('/', router);
 };
 
@@ -36,14 +45,35 @@ router.get('/api/knits', function (req, res){
 })
 
 //CREATE
-router.post('/api/knits', authenticatedUser, function (req, res){
-  Knit.create(req.body.knit, function (err, knit){
-    if (err) {
-      res.status(400).json({success: false, message: err})
-    } else {
-      res.json({success: true, knit: knit})
-    }
-  });
+router.post('/api/knits', multipartMiddleware, function (req, res){
+  console.log('hello');
+  var file = req.files.file;
+  var stream = fs.createReadStream(file.path);
+
+  var fileName = randomstring.generate({readable: true});
+    fileName += '.png';
+
+  S3FS.writeFile(fileName, stream).then(function(){
+    // delete the file
+    fs.unlink(file.path, function(err){
+      if (err) console.log(err);
+
+      var knit = req.body.knit;
+      knit.image = fileName;
+
+      Knit.create(req.body.knit, function (err, knit){
+        if (err) {
+          res.status(400).json({success: false, message: err})
+        } else {
+          // res.send(knit);
+          res.redirect('../knits/' + knit._id);
+        }
+      });
+
+    });
+  })
+
+
 })
 
 //SHOW

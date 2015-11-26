@@ -1,48 +1,67 @@
-<div class="well">
-  <h2>Update shop details</h2>
-  <form id="edit-shop-form">
-    <div class="form-group">
-      <label for="name">name</label>
-      <input type="text" class="form-control" id="edit-shop-name" name="knit[name]" placeholder="Shop name">
-    </div>
+<div class="container auth">
+  <div id="big-form" class="well auth-box">
+    <form id="edit-shop-form">
+      <fieldset>
+        <legend>Edit this knit shop</legend>
 
-    <div class="form-group">
-      <label for="address">Address</label>
-      <input type="text" class="form-control" id="edit-shop-address" name="knit[address]" placeholder="Shop address">
-    </div>
+        <div class="form-group">
+          <label class=" control-label" for="textinput">Shop name</label>
+          <div class="">
+            <input id="edit-shop-name" name="knit[name]" placeholder="Name" class="form-control input-md" type="text">
+          </div>
+        </div>
 
-    <div class="form-group">
-      <label for="address">Phone</label>
-      <input type="text" class="form-control" id="edit-shop-phone" name="knit[phone]" placeholder="Phone number">
-    </div>
+        <div class="form-group">
+          <label class=" control-label" for="textinput">Shop address</label>
+          <div class="">
+            <input id="edit-shop-address" name="knit[address]" placeholder="Address" class="form-control input-md" type="text">
+          </div>
+        </div>
 
-    <div class="form-group">
-      <label for="image">Photo</label>
-      <input type="text" class="form-control" id="edit-shop-image" name="knit[image]" placeholder="Shop image or photo">
-    </div>
-
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" class="form-control" id="edit-shop-email" name="knit[email]" placeholder="Email">
-    </div>
-
-    <div class="form-group">
-      <label for="website">Website</label>
-      <input type="website" class="form-control" id="edit-shop-website" name="knit[website]" placeholder="Website">
-    </div>
-
-    <div class="form-group">
-      <label for="hours">Opening Hours</label>
-      <input type="hours" class="form-control" id="edit-shop-hours" name="knit[hours]" placeholder="Opening Hours">
-    </div>
-
-    <div class="form-group">
-      <label for="note">Special notes</label>
-      <input type="note" class="form-control" id="edit-shop-note" name="knit[note]" placeholder="Special notes">
-    </div>
-
-    <button id="edit-shop-btn" type="submit" class="btn btn-default">Submit</button>
-  </form>
+        <div class="form-group">
+          <label class=" control-label" for="textinput">Shop phone number</label>
+          <div class="">
+            <input id="edit-shop-phone" name="knit[phone]" placeholder="Phone" class="form-control input-md" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class=" control-label" for="textinput">Shop photo or image</label>
+          <div class="">
+            <input id="edit-shop-image" name="knit[image]" placeholder="Photo" class="form-control input-md" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class=" control-label" for="textinput">Shop email</label>
+          <div class="">
+            <input id="edit-shop-email" name="knit[email]" placeholder="Email" class="form-control input-md" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class=" control-label" for="textinput">Shop website</label>
+          <div class="">
+            <input id="edit-shop-website" name="knit[website]" placeholder="website" class="form-control input-md" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class=" control-label" for="textinput">Opening hours</label>
+          <div class="">
+            <input id="edit-shop-hours" name="knit[hours]" placeholder="Opening hours" class="form-control input-md" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class=" control-label" for="textarea">Special notes about the shop</label>
+          <div class="">
+            <textarea class="form-control" id="edit-shop-note" name="knit[note]" placeholder="text here"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="">
+            <button id="edit-shop-btn" type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
 </div>
 
 <script src="/js/knits/edit.js"></script>

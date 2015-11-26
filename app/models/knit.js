@@ -13,9 +13,5 @@ var KnitSchema = new mongoose.Schema({
   note: String,
 });
 
-KnitSchema.methods.showPhoto = function() {
-  return '/img/' + this.image;
-};
-
 var Knit = mongoose.model('Knit', KnitSchema);
 module.exports = Knit;

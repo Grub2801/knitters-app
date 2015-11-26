@@ -17,7 +17,7 @@ var API_WRAPPER = function () {
 
   this.createKnitShop = function (params) {
     return $.ajax({
-      url: this.URL_BASE + "/api/knits/",
+      url: this.URL_BASE + "/api/knits",
       method: "POST",
       data: params
     });

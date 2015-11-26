@@ -1,54 +1,56 @@
 <div class="container auth">
   <div id="big-form" class="well auth-box">
-    <form id="new-shop-form">
+    <form id="new-shop-form" enctype="multipart/form-data" method="POST">
       <fieldset>
         <legend>Add a new knit shop</legend>
         <div class="form-group">
           <label class=" control-label" for="textinput">Shop name</label>
           <div class="">
-            <input id="shop-name" name="textinput" placeholder="Name" class="form-control input-md" type="text">
+            <input id="shop-name" name="knit[name]" placeholder="Name" class="form-control input-md" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class=" control-label" for="textinput">Shop address</label>
           <div class="">
-            <input id="shop-address" name="textinput" placeholder="Address" class="form-control input-md" type="text">
+            <input id="shop-address" name="knit[address]" placeholder="Address" class="form-control input-md" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class=" control-label" for="textinput">Shop phone number</label>
           <div class="">
-            <input id="shop-phone" name="textinput" placeholder="Phone" class="form-control input-md" type="text">
+            <input id="shop-phone" name="knit[phone]" placeholder="Phone" class="form-control input-md" type="text">
           </div>
         </div>
+
         <div class="form-group">
-          <label class=" control-label" for="textinput">Shop photo or image</label>
+          <!-- <label class=" control-label" for="textinput">Shop photo or image</label> -->
           <div class="">
-            <input id="shop-image" name="textinput" placeholder="Photo" class="form-control input-md" type="text">
+            <input id="shop-image" name="file" placeholder="Photo" class="form-control" type="file">
           </div>
         </div>
+
         <div class="form-group">
           <label class=" control-label" for="textinput">Shop email</label>
           <div class="">
-            <input id="shop-email" name="textinput" placeholder="Email" class="form-control input-md" type="text">
+            <input id="shop-email" name="knit[email]" placeholder="Email" class="form-control input-md" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class=" control-label" for="textinput">Shop website</label>
           <div class="">
-            <input id="shop-website" name="textinput" placeholder="website" class="form-control input-md" type="text">
+            <input id="shop-website" name="knit[website]" placeholder="website" class="form-control input-md" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class=" control-label" for="textinput">Opening hours</label>
           <div class="">
-            <input id="shop-hours" name="textinput" placeholder="Opening hours" class="form-control input-md" type="text">
+            <input id="shop-hours" name="knit[hours]" placeholder="Opening hours" class="form-control input-md" type="text">
           </div>
         </div>
         <div class="form-group">
           <label class=" control-label" for="textarea">Special notes about the shop</label>
           <div class="">
-            <textarea class="form-control" id="shop-note" name="textarea">default text</textarea>
+            <textarea class="form-control" id="shop-note" name="knit[note]">default text</textarea>
           </div>
         </div>
         <div class="form-group">
