@@ -8,9 +8,8 @@
 1. Users can see a list of all retail store with google maps.
 2. Users can select a retail store to find more infomration, including:
   - opening hours
-  - description (if available)
+  - special notes about the store
   - contact details
-  - reviews from other users
 3. Users can signup and logIn to:
   - add and edit a retail store
 
@@ -21,4 +20,8 @@
 
 ##Wireframes
 
-add link
+https://drive.google.com/file/d/0ByN-DR7n8MQ5c295bTVrUjJVbG8/view?usp=sharing
+
+##API document
+
+https://docs.google.com/spreadsheets/d/16f6YmVdnh_3-SUoLu2Lx6DA7xshSvHq8x5HOp3t02mM/edit?usp=sharing

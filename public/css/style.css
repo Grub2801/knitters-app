@@ -63,3 +63,99 @@ a#edit-button {
 .panel {
   background: none;
 }
+
+#big-form{
+  margin-top: 60px;
+}
+
+.auth .auth-box legend{
+  color:black;
+  border:none;
+  font-weight:300;
+  font-size:24px;
+}
+.auth .auth-box{
+  background-color:#fff;
+  max-width:460px;
+  margin:0 auto;
+  border:1px solid rgba(255, 255, 255, 0.4);;
+  background-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+  margin-top:40px;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.32);
+  -moz-box-shadow:    0px 0px 30px 0px rgba(50, 50, 50, 0.32);
+  box-shadow:         0px 0px 30px 0px rgba(50, 50, 50, 0.32);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -ms-transition: background 1s ease-in-out;
+  -o-transition: background 1s ease-in-out;
+  transition: background 1s ease-in-out;
+}
+@media(max-width:460px){
+  .auth .auth-box{
+   margin:0 10px;
+ }
+}
+
+.auth .auth-box input::-webkit-input-placeholder { /* WebKit browsers */
+  color:    #fff;
+  font-weight:300;
+}
+.auth .auth-box input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #fff;
+  font-weight:300;
+}
+.auth .auth-box input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #fff;
+  font-weight:300;
+}
+.auth .auth-box input:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:    #fff;
+  font-weight:300;
+}
+
+.auth form{
+    font-weight:300!important;
+}
+.auth form input[type="text"],
+  border:none;
+  padding:10px 0 10px 0;
+  background-color: rgba(255, 255, 255, 0)!important;
+  background: rgba(255, 255, 255, 0);
+  color:#fff;
+  font-size:16px;
+  border-bottom:1px dotted #fff;
+  border-radius:0;
+  box-shadow:none!important;
+  height:auto;
+}
+.auth textarea{
+  background-color: rgba(255, 255, 255, 0)!important;
+  color:#fff!important;
+}
+
+.auth form label{
+    color: black;
+    font-size:21px;
+    font-weight:300;
+}
+.auth form .btn{
+  background:none;
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+.auth form .btn-primary:hover{
+    background:rgba(66, 139, 202, 0.3);
+    border-color: black;
+    color: black;
+}
+.auth form .btn-primary {
+    border-color: black;
+    color: black;
+}
