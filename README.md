@@ -1,27 +1,4 @@
 # WDI-Express
-
-Sample Express/Mongo App for WDI with the service of [yeoman](https://github.com/yeoman/yo) and [generator-express](https://github.com/petecoop/generator-express)
-
-### Configuration
-
-`/config/config.js` (server) and (Express)
-
-### Adding Front-End dependencies
-
-```
-$ bower install jquery --save
-```
-
-Don't forget to include the library in your templates, referencing the bower package in `public/components/...`
-
-### Running the app
-
-Starting the app is easy:
-
-```
-$ gulp
-```
-
 #Knitters-app
 
 **Knitters-app** aims to bring people that love to knit together with retailers so that  knitters can source wool locally in Hong Kong, helping to build a community of knitting fanatics.
@@ -31,9 +8,8 @@ $ gulp
 1. Users can see a list of all retail store with google maps.
 2. Users can select a retail store to find more infomration, including:
   - opening hours
-  - description (if available)
+  - special notes about the store
   - contact details
-  - reviews from other users
 3. Users can signup and logIn to:
   - add and edit a retail store
 
@@ -44,4 +20,8 @@ $ gulp
 
 ##Wireframes
 
-add link
+https://drive.google.com/file/d/0ByN-DR7n8MQ5c295bTVrUjJVbG8/view?usp=sharing
+
+##API document
+
+https://docs.google.com/spreadsheets/d/16f6YmVdnh_3-SUoLu2Lx6DA7xshSvHq8x5HOp3t02mM/edit?usp=sharing
