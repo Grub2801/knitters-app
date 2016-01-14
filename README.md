@@ -5,12 +5,11 @@
 
 ##Features
 
-1. Users can see a list of all retail store with google maps.
-2. Users can select a retail store to find more infomration, including:
+1. Users can select a retail store to find more infomration, including:
   - opening hours
   - special notes about the store
   - contact details
-3. Users can signup and logIn to:
+2. Users can signup and logIn to:
   - add and edit a retail store
 
 ##Technologies
